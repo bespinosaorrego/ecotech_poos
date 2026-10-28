@@ -9,7 +9,6 @@ class Proyecto:
         self._fechaInicio = fecha_inicio
         self._descripcion = descripcion
         
-        # Relación PARTICIPA (*)
         self._empleados_asignados: List[Empleado] = []
 
     # Métodos del UML

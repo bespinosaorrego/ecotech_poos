@@ -30,4 +30,4 @@ def validar_clave(cls, clave):
         raise ValueError(
             f"Use al menos {cls.MIN_CLAVE} caracteres."
     )
-    return clave # Sin strip, lower ni truncado.
+    return clave

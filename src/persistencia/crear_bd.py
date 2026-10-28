@@ -79,11 +79,20 @@ def crear_tablas():
                 PRIMARY KEY (id_proyecto, id_empleado),
                 FOREIGN KEY (id_proyecto) REFERENCES proyecto(id),
                 FOREIGN KEY (id_empleado) REFERENCES empleado(id)
+            )""",
+            """
+                CREATE TABLE IF NOT EXISTS usuario (
+                id INT PRIMARY KEY AUTO_INCREMENT,
+                empleado_id INT NOT NULL UNIQUE,
+                nombre_usuario VARCHAR(50) NOT NULL UNIQUE,
+                password_hash VARCHAR(255) NOT NULL,
+                FOREIGN KEY (empleado_id) REFERENCES empleado(id) ON DELETE CASCADE ON UPDATE CASCADE
             );
             """
         ]
         for s in sentencias:
             cursor.execute(s)
+
 
     conexion.commit()
     conexion.close()

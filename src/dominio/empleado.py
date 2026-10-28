@@ -13,10 +13,9 @@ class Empleado:
         self._sueldo = sueldo
         self._rol = rol
         
-        # Relación INSPECCIONA (0..*) ahora con RegistroTiempo
         self._registros_tiempo: List[RegistroTiempo] = []
 
-    # Métodos del UML
+
     def method(self, type: str):
         """Método genérico indicado en el UML."""
         print(f"Ejecutando método genérico de tipo: {type}")

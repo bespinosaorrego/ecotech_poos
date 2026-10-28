@@ -8,7 +8,6 @@ class RegistroTiempo:
         self._descripcionTarea = descripcion_tarea
         self._valorHoraTrabajada = valor_hora_trabajada
 
-    # Método del UML
     def calculoHoras(self) -> int:
         """Retorna la cantidad de horas trabajadas en este registro."""
         return self._horasTrabajadas

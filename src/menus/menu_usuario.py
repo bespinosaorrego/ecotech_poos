@@ -38,17 +38,17 @@ def solicitar_login():
     return usuario
 
 def mostrar_perfil(usuario_actual):
-if usuario_actual is None:
+    if usuario_actual is None:
         print("Inicie sesión para ver el perfil.")
         return
     print(f"Usuario: {usuario_actual['nombre_usuario']}")
     print(f"Empleado: {usuario_actual['empleado_id']}")
 
-    def consultar_indicador(usuario_actual):
+def consultar_indicador(usuario_actual):
     if usuario_actual is None:
         print("Inicie sesión para consultar indicadores.")
         return
-    mostrar_indicador() # Consulta de la clase 2.
+    mostrar_indicador() 
 
 def menu_privado(usuario_actual):
     if usuario_actual is None:
